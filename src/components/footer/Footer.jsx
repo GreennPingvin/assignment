@@ -1,15 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import logo from '../../assets/icons/logo.svg'
 import langsIcon from '../../assets/icons/lang.svg'
 import Socials from './Socials'
 import './footer.scss'
+import Logo from '../Logo'
 
 const Footer = () => {
   return (
     <footer className="footer">
-      <img src={logo} alt="Логотип сайта" />
+      <Logo />
       <nav className="footer__nav">
         <ul className="footer__links">
           <li>

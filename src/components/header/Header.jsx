@@ -1,14 +1,15 @@
 import React from 'react'
-import logo from '../../assets/icons/logo.svg'
+import { Link } from 'react-router-dom'
 import favorites from '../../assets/icons/favorites.svg'
 import cart from '../../assets/icons/cart.svg'
 import './header.scss'
-import { Link } from 'react-router-dom'
+import Logo from '../Logo'
+
 
 const Header = ({ ...props }) => {
   return (
     <header className="header" {...props}>
-      <img src={logo} alt="Логотип сайта" />
+      <Logo />
       <div className="header__icons">
         <Link>
           <img src={favorites} alt="" />
