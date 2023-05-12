@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import favorites from '../../assets/icons/favorites.svg'
-import cart from '../../assets/icons/cart.svg'
+import favorites from '../../../assets/icons/favorites.svg'
+import cart from '../../../assets/icons/cart.svg'
 import './header.scss'
 import Logo from '../Logo'
 

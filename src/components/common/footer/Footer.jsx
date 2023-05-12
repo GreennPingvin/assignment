@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import langsIcon from '../../assets/icons/lang.svg'
-import Socials from './Socials'
+import langsIcon from '../../../assets/icons/lang.svg'
+import Socials from '../../Socials'
 import './footer.scss'
 import Logo from '../Logo'
 

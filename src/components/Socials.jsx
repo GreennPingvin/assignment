@@ -2,9 +2,9 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 import './socials.scss'
-import vk_icon from '../../assets/icons/vk.svg'
-import telegram_icon from '../../assets/icons/telegram.svg'
-import whatsup_icon from '../../assets/icons/whatsapp.svg'
+import vk_icon from '../assets/icons/vk.svg'
+import telegram_icon from '../assets/icons/telegram.svg'
+import whatsup_icon from '../assets/icons/whatsapp.svg'
 
 const Socials = ({ ...props }) => {
   return (
