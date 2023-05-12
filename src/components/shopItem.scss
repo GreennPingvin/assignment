@@ -1,11 +1,52 @@
 .shop-item {
-  display: flex;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  padding: 0px 22px 33px 22px;
   width: 350px;
   height: 407px;
-  left: 182px;
-  top: 132px;
-
+  font-weight: 600;
   background: #ffffff;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
   border-radius: 30px;
+  &__top {
+    display: flex;
+    justify-content: center;
+    img {
+      align-self: center;
+    }
+  }
+
+  &__bottom {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-auto-rows: auto;
+    justify-content: space-between;
+    row-gap: 25px;
+    // height: 74px;
+  }
+
+  &__title {
+  }
+
+  &__price {
+    justify-self: end;
+    color: var(--orange);
+  }
+
+  &__rate {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    // height: 22px;
+  }
+
+  &__rate-icon {
+  }
+
+  &__rate-text {
+    color: var(--gray);
+  }
+
+  &__buy-btn {
+  }
 }

@@ -2,12 +2,12 @@ import React from 'react'
 import logo from '../../assets/icons/logo.svg'
 import favorites from '../../assets/icons/favorites.svg'
 import cart from '../../assets/icons/cart.svg'
-import './_header.scss'
+import './header.scss'
 import { Link } from 'react-router-dom'
 
-const Header = () => {
+const Header = ({ ...props }) => {
   return (
-    <header className="header">
+    <header className="header" {...props}>
       <img src={logo} alt="Логотип сайта" />
       <div className="header__icons">
         <Link>

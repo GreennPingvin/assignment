@@ -1,12 +1,12 @@
 import React from 'react'
 import './subtitle.scss'
 
-const Title = ({ text, ...props }) => {
+const Subtitle = ({ children, ...props }) => {
   return (
     <h2 className="subtitle" {...props}>
-      {text}
+      {children}
     </h2>
   )
 }
 
-export default Title
+export default Subtitle

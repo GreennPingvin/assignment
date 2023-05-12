@@ -1,14 +1,22 @@
 import React from 'react'
 
-import Title from '../components/Subtitle'
-import ShopItem from '../components/ShopItem'
-import headphones from '../assets/data/headphones'
+import HEADPHONES from '../assets/data/headphones'
+import WIRELESS_HEADPHONES from '../assets/data/wireless_headphones'
+import ShopItemsList from '../components/ShopItemsList'
 
 const HomePage = () => {
   return (
     <div className="home-page">
-      <Title text="Наушники" />
-      <ShopItem item={headphones[0]} />
+      <ShopItemsList
+        title="Наушники"
+        items={HEADPHONES}
+        style={{ marginBottom: 28 }}
+      />
+      <ShopItemsList
+        title="Беспроводные наушники"
+        items={WIRELESS_HEADPHONES}
+        style={{ marginBottom: 28 }}
+      />
     </div>
   )
 }

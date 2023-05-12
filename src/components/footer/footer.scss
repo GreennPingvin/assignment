@@ -1,0 +1,43 @@
+.footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-between;
+  align-items: start;
+  padding: 29px 27px 32px 29px;
+  min-height: 149px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 30px 30px 0px 0px;
+  &__nav {
+    height: 100%;
+  }
+
+  &__links {
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    grid-auto-flow: column;
+    justify-content: space-between;
+    width: 427px;
+    height: 100%;
+  }
+
+  &__link {
+  }
+
+  &__langs {
+    grid-row: 2/4;
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    font-size: 15px;
+  }
+
+  &__langs-icon {
+  }
+
+  &__langs-item {
+    &--active {
+      font-weight: 700;
+      color: var(--orange);
+    }
+  }
+}

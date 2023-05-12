@@ -1,0 +1,11 @@
+.button {
+  font: inherit;
+  font-weight: 600;
+  color: inherit;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  &:hover {
+    background-color: transparent;
+  }
+}

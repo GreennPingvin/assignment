@@ -2,8 +2,9 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 import logo from '../../assets/icons/logo.svg'
+import langsIcon from '../../assets/icons/lang.svg'
 import Socials from './Socials'
-import './_footer.scss'
+import './footer.scss'
 
 const Footer = () => {
   return (
@@ -23,9 +24,20 @@ const Footer = () => {
           <li>
             <Link className="footer__link">Условия сервиса</Link>
           </li>
+          <div className="footer__langs">
+            <img
+              className="footer__langs-icon"
+              src={langsIcon}
+              alt="Иконка языков"
+            />
+            <Link className="footer__langs-item footer__langs-item--active">
+              Рус
+            </Link>
+            <Link className="footer__langs-item">Eng</Link>
+          </div>
         </ul>
       </nav>
-      <Socials />
+      <Socials style={{ justifySelf: 'end' }} />
     </footer>
   )
 }

@@ -6,9 +6,9 @@ import vk_icon from '../../assets/icons/vk.svg'
 import telegram_icon from '../../assets/icons/telegram.svg'
 import whatsup_icon from '../../assets/icons/whatsapp.svg'
 
-const Socials = () => {
+const Socials = ({ ...props }) => {
   return (
-    <div className="socials">
+    <div className="socials" {...props}>
       <Link>
         <img src={vk_icon} alt="иконка vk" />
       </Link>
