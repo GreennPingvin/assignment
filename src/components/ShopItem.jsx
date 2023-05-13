@@ -4,14 +4,14 @@ import './shopItem.scss'
 import rate from '../assets/icons/rate.svg'
 import Button from './UI/Button'
 
-const ShopItem = ({ item, ...props }) => {
+const ShopItem = ({ item, onClick, ...props }) => {
   return (
     <div className="shop-item" {...props}>
       <div className="shop-item__top">
         <img src={item.img} alt={item.name} />
       </div>
       <div className="shop-item__bottom">
-        <div className="shop-item__title">{item.name}</div>
+        <div className="shop-item__title">{item.title}</div>
         <div className="shop-item__price">{item.price} ₽</div>
         <div className="shop-item__rate">
           <img
@@ -21,7 +21,9 @@ const ShopItem = ({ item, ...props }) => {
           />
           <div className="shop-item__rate-text">{item.rate}</div>
         </div>
-        <Button className="shop-item__buy-btn">Купить</Button>
+        <Button className="shop-item__buy-btn" onClick={onClick}>
+          Купить
+        </Button>
       </div>
     </div>
   )
