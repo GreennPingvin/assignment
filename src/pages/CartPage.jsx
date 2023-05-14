@@ -3,13 +3,19 @@ import React, { useContext } from 'react'
 import './cartPage.scss'
 import Subtitle from '../components/Subtitle'
 import CartItem from '../components/CartItem'
-import HEADPHONES from '../assets/data/headphones'
+import data from '../assets/data/data'
 import Button from '../components/UI/Button'
 import { CartContext } from '../contexts/CartContext'
 
 const CartPage = () => {
   const cartContext = useContext(CartContext)
-  console.log(cartContext)
+
+  function calcTotalPrice() {
+    return [...cartContext.cartItems.entries()].reduce(
+      (acc, [id, amount]) => acc + data[id - 1].price * amount,
+      0,
+    )
+  }
 
   return (
     <div className="cart-page">
@@ -19,19 +25,14 @@ const CartPage = () => {
       <div className="cart-page__wrapper">
         <div className="cart-page__cart-items">
           {[...cartContext.cartItems].map(([k, v]) => (
-            <CartItem key={k} item={HEADPHONES[k - 1]} quantity={v} />
+            <CartItem key={k} item={data[k - 1]} quantity={v} />
           ))}
         </div>
         {cartContext.cartItems.size ? (
           <div className="total">
             <div className="total__description">
               <div className="total__text">ИТОГО</div>
-              <div className="total__price">
-                ₽{' '}
-                {[...cartContext.cartItems.values()].reduce(
-                  (acc, n) => acc + n,
-                )}
-              </div>
+              <div className="total__price">₽ {calcTotalPrice()}</div>
             </div>
             <Button className="total__btn">Перейти к оформлению</Button>
           </div>
