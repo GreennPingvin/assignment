@@ -3,16 +3,28 @@ import Footer from './components/common/footer/Footer'
 import Header from './components/common/header/Header'
 import HomePage from './pages/HomePage'
 import CartPage from './pages/CartPage'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { CartContext } from './contexts/CartContext'
+import { deserializeMap, serializeMap } from './components/utils/savingData'
 
 function App() {
-  const [cartItems, setCartItems] = useState(new Map())
+  const [cartItems, setCartItems] = useState(null)
+  useEffect(() => {
+    if (cartItems === null) {
+      setCartItems(deserializeMap('cartItems'))
+    } else {
+      serializeMap('cartItems', cartItems)
+    }
+  }, [cartItems])
+
+  if (!cartItems) {
+    return
+  }
 
   return (
     <BrowserRouter>
       <div className="wrapper">
-        <CartContext.Provider value={{cartItems, setCartItems}}>
+        <CartContext.Provider value={{ cartItems, setCartItems }}>
           <Header />
           <Routes>
             <Route path="/" element={<HomePage />} />

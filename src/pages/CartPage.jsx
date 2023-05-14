@@ -10,6 +10,7 @@ import { CartContext } from '../contexts/CartContext'
 const CartPage = () => {
   const cartContext = useContext(CartContext)
   console.log(cartContext)
+
   return (
     <div className="cart-page">
       <Subtitle style={{ color: '#1C1C27', marginBottom: 13 }}>
